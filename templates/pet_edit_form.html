@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{pet.name}}</h1>
+<b>{{pet.species}}, Age: {{pet.age}}</b>
+
+<p><img src="{{pet.photo_url}}""></p>
+
+<h2>Update</h2>
+
+<form method="POST">
+    {% include "_form.html" %}
+    <button type="submit">Update</button>
+</form>
+
+{% endblock %}
